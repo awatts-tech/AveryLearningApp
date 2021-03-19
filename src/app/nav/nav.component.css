@@ -1,0 +1,88 @@
+
+
+body {
+    padding-top: 25px;  
+   }
+   
+   .demo-1 {
+    height: 60px;  
+    overflow: hidden;
+    position: relative;
+   }
+   
+   .demo-1 h3 {
+    font-size: 5em;
+    color: hotpink;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+    /* Starting position */
+    -moz-transform:translateX(100%);
+    -webkit-transform:translateX(100%);  
+    transform:translateX(100%);
+    /* Apply animation to this element */  
+    -moz-animation: demo-1 15s linear infinite;
+    -webkit-animation: demo-1 15s linear infinite;
+    animation: demo-1 15s linear infinite;
+   }
+   /* Move it (define the animation) */
+   @-moz-keyframes demo-1 {
+    0%   { -moz-transform: translateX(100%); }
+    100% { -moz-transform: translateX(-100%); }
+   }
+   @-webkit-keyframes demo-1 {
+    0%   { -webkit-transform: translateX(100%); }
+    100% { -webkit-transform: translateX(-100%); }
+   }
+   @keyframes demo-1 {
+    0%   { 
+    -moz-transform: translateX(100%); /* Firefox bug fix */
+    -webkit-transform: translateX(100%); /* Firefox bug fix */
+    transform: translateX(100%);     
+    }
+    100% { 
+    -moz-transform: translateX(-100%); /* Firefox bug fix */
+    -webkit-transform: translateX(-100%); /* Firefox bug fix */
+    transform: translateX(-100%); 
+    }
+   }
+
+
+   .btns{
+       position: relative;
+       align-self: center;
+       padding:100px;
+       width: 100%;
+       text-align: center;
+   }
+
+
+   .btn{
+    margin: 50px;
+    display: inline-flex;
+    color: #fff;
+    padding: 10px;
+  
+   
+    border-radius: 5px;
+    animation: blinkingBackground 2s infinite;
+}
+@keyframes blinkingBackground{
+    0%		{ background-color: #10c018;}
+    25%		{ background-color: pink;}
+    50%		{ background-color: purple;}
+    75%		{ background-color: #254878;}
+    100%	        { background-color: #04a1d5;}
+}
+
+a{
+    padding: 30px;
+}
+
+
+.nav-head{
+    display: flex;
+   }
